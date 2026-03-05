@@ -957,30 +957,30 @@
             <span class="tooltip tooltip-multiline">Источник: система учета времени (WMS)<br>Среднее за последние 7 дней</span>
           </span>
         </div>
-        <div class="info-list">
-          <div class="info-item" style="width: 75%;">
-            <div class="info-item-label">Подписание - Приемка на паллету</div>
-            <div class="info-item-value">10 мин</div>
+        <div class="staff-list">
+          <div class="staff-list-item">
+            <span>Подписание - Приемка на паллету</span>
+            <span class="staff-list-value">10 мин</span>
           </div>
-          <div class="info-item" style="width: 60%;">
-            <div class="info-item-label">Приемка на паллету - Буфер заданий</div>
-            <div class="info-item-value">7 мин</div>
+          <div class="staff-list-item">
+            <span>Приемка на паллету - Буфер заданий</span>
+            <span class="staff-list-value">7 мин</span>
           </div>
-          <div class="info-item" style="width: 88%;">
-            <div class="info-item-label">Буфер заданий - Задание</div>
-            <div class="info-item-value">15 мин</div>
+          <div class="staff-list-item">
+            <span>Буфер заданий - Задание</span>
+            <span class="staff-list-value">15 мин</span>
           </div>
-          <div class="info-item" style="width: 50%;">
-            <div class="info-item-label">Задание - На стол</div>
-            <div class="info-item-value">5 мин</div>
+          <div class="staff-list-item">
+            <span>Задание - На стол</span>
+            <span class="staff-list-value">5 мин</span>
           </div>
-          <div class="info-item" style="width: 100%;">
-            <div class="info-item-label">На столе - Последняя ШК</div>
-            <div class="info-item-value">20 мин</div>
+          <div class="staff-list-item">
+            <span>На столе - Последняя ШК</span>
+            <span class="staff-list-value">20 мин</span>
           </div>
-          <div class="info-item" style="width: 50%;">
-            <div class="info-item-label">Последняя ШК - Закрытие</div>
-            <div class="info-item-value">5 мин</div>
+          <div class="staff-list-item">
+            <span>Последняя ШК - Закрытие</span>
+            <span class="staff-list-value">5 мин</span>
           </div>
         </div>
       </div>
@@ -993,18 +993,27 @@
           Информация по сотрудникам
         </div>
 
-        <div style="text-align:center;margin-bottom:24px;">
-          <div style="font-size:48px;font-weight:950;color:var(--purple);line-height:1;">45</div>
-          <div class="tooltip-wrapper" style="font-size:12px;font-weight:600;color:var(--muted);text-transform:uppercase;letter-spacing:0.5px;margin-top:6px;display:inline-flex;align-items:center;gap:6px;">
-            Всего сотрудников
-            <span class="info-icon">
-              i
-              <span class="tooltip">Сотрудники, которые брали задания с 08:00</span>
-            </span>
-          </div>
-        </div>
-
         <div class="staff-list">
+          <div class="staff-list-item">
+            <span class="tooltip-wrapper">
+              Ср. время работы
+              <span class="info-icon">
+                i
+                <span class="tooltip">Среднее время работы сотрудников за смену</span>
+              </span>
+            </span>
+            <span class="staff-list-value">8.2 ч</span>
+          </div>
+          <div class="staff-list-item">
+            <span class="tooltip-wrapper">
+              Всего сотрудников
+              <span class="info-icon">
+                i
+                <span class="tooltip">Сотрудники, которые брали задания с 08:00</span>
+              </span>
+            </span>
+            <span class="staff-list-value">45</span>
+          </div>
           <div class="staff-list-item">
             <span class="tooltip-wrapper">
               На воротах
@@ -1036,13 +1045,6 @@
             <span class="staff-list-value">28</span>
           </div>
         </div>
-
-        <div style="margin-top:20px;">
-          <div style="background:var(--purple);height:32px;border-radius:8px;display:flex;align-items:center;justify-content:space-between;padding:0 12px;color:white;font-weight:700;margin-bottom:6px;">
-            <span style="font-size:13px;">Ср. время работы</span>
-            <span style="font-size:16px;">8.2 ч</span>
-          </div>
-        </div>
       </div>
 
       <div class="staff-card">
@@ -1071,17 +1073,8 @@
       </div>
 
       <div class="tasks-card">
-        <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:16px;padding-bottom:12px;border-bottom:2px solid var(--line);">
-          <div class="tasks-title" style="margin:0;padding:0;border:none;">
-            Кол-во выполненных заданий
-          </div>
-          <div class="tooltip-wrapper" style="font-size:12px;color:var(--muted);font-weight:500;">
-            Ср. время обработки поступления: 8.5 ч
-            <span class="info-icon">
-              i
-              <span class="tooltip tooltip-multiline">Источник: отчет по ср.времени за обработку<br>Note: Таймер обновляется с 08:00</span>
-            </span>
-          </div>
+        <div class="tasks-title" style="margin-bottom:16px;padding-bottom:12px;border-bottom:2px solid var(--line);">
+          Кол-во выполненных заданий
         </div>
 
         <div class="task-item">
@@ -1107,6 +1100,16 @@
         <div class="task-item">
           <span>Кол-во палет в перемещении</span>
           <span class="task-value">34</span>
+        </div>
+        <div class="task-item" style="border-top:2px solid var(--line);margin-top:8px;padding-top:14px;">
+          <span class="tooltip-wrapper">
+            Ср. время обработки поступления
+            <span class="info-icon">
+              i
+              <span class="tooltip tooltip-multiline">Источник: отчет по ср.времени за обработку<br>Note: Таймер обновляется с 08:00</span>
+            </span>
+          </span>
+          <span class="task-value">8.5 ч</span>
         </div>
       </div>
     </div>
